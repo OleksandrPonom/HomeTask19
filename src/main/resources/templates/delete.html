@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<form action="/note/delete" method="post">
+    <div>
+        <label for="id-for-delete">Id for delete:</label>
+        <input type="text = ${note.id}" name="id" id="id-for-delete" th:value="${note.id}" contenteditable="false"/>
+    </div>
+
+    <div>
+        <button type="submit">Delete</button>
+    </div>
+</form>
+
+</body>
+</html>
