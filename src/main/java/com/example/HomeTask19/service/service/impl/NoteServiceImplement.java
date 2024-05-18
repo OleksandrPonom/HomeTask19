@@ -66,12 +66,4 @@ public class NoteServiceImplement implements NoteService {
 			throw new NoteNotFoundException(id);
 		}
 	}
-
-	@Override
-	public NoteDto getByTitle(String title) throws NoteNotFoundException {
-		NoteEntity noteEntity =noteRepository.findByTitle(title)
-				.orElseThrow(NoteNotFoundException::new);
-		return noteMapper.toNoteDto(noteEntity);
-	}
-
 }
